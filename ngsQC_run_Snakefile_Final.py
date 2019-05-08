@@ -2,6 +2,7 @@ import numpy as np
 # to get function np.unique (removes repetitions in a list)
 # for example np.unique(['sample1', 'sample2', 'sample2', 'sample3']) -> ['sample1', 'sample2', 'sample3']
 
+# :)
 
 READS = os.listdir('fastq_raw')
 SAMPLE_RUNS = np.unique([('_').join(f.split('_')[:3]) for f in READS])
