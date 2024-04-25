@@ -32,7 +32,7 @@ rule run_snp_cleaner:
 #old option: 
 #bcftools mpileup --threads 20 -f {ref_fasta} -b {input} -r scaffold_{wildcards.scaffold_id} -a SP,DP | bcftools call --skip-variants indels -f GQ -c -| /home/joana/software/ngsQC/snpCleaner/snpCleaner.pl -D 4250 -k 68 - u 1 -h 0 -H 1e-4 -b 1e-20 -S 1e-4 -f 1e-4 -e 1e-4 -v -B {output[0]} -p {output[1]} > {output[2]}
  
- #snpCleaner - After taliking with Tyler
+ #snpCleaner 
 #-D  50x times 85 individuals -> max raw site read depth 
 #-k 1 site is considered covered if at least 80% individuals are covered 
 #-u 1 # individual considered covered if has >=1 reads at a site 
